@@ -3,37 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kron Coin</title>
+    <title>Krun Coin</title>
     <link rel="icon" type="image/x-icon" href="./img/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
       rel="stylesheet"
     />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <script
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="./js/main.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
       img {
         pointer-events: none;
       }
     </style>
   </head>
-  <body>
+  <body style="font-family: 'Protest Riot', sans-serif">
     <!-- navbar -->
     <nav
-      class="bg-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 z-50"
+      style="background-color: #080808"
+      class="border-gray-200 dark:bg-gray-900 fixed w-full top-0 z-50"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="./img/logo.png" class="h-10" alt="Kron Logo" />
+          <img src="./img/logo.png" class="h-10" alt="Krun Logo" />
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Kron Coin</span
-          >
+            class="self-center text-2xl font-medium whitespace-nowrap text-white"
+            >StarkUnit
+            <span style="color: #ffbf00" class="text-lg">(Krun)</span>
+          </span>
         </a>
         <button
           data-collapse-toggle="navbar-default"
@@ -60,12 +71,12 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 lg:text-white md:text-white :dark:hover:text-orange-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
                 >Home</a
               >
@@ -73,28 +84,28 @@
             <li>
               <a
                 href="#about"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 lg:text-white md:text-white :dark:hover:text-orange-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#features"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 lg:text-white md:text-white :dark:hover:text-orange-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Features</a
               >
             </li>
             <li>
               <a
                 href="#WhyUs"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 lg:text-white md:text-white :dark:hover:text-orange-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Why Us
               </a>
             </li>
             <li>
               <a
                 href="#faq"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-400 md:p-0 lg:text-white md:text-white :dark:hover:text-orange-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent"
                 >FAQ</a
               >
             </li>
@@ -103,6 +114,7 @@
       </div>
     </nav>
     <!-- main section -->
+
     <section
       class="bg-center bg-fixed bg-no-repeat bg-[url('./img/back.jpg')] bg-gray-700 bg-blend-multiply"
     >
@@ -110,39 +122,40 @@
         class="px-4 mx-auto max-w-screen-xl text-center py-24 mt-16 lg:py-56"
       >
         <h1
-          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
+          class="mb-4 text-4xl font-poppins tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
         >
-          Revolutionizing Secure Access in the Web 3.0 Era
+          Unlocking the future with Krun that is <br />
+          <span style="color: #ffbf00" class="typedText"></span>
         </h1>
         <p
           class="mb-9 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
         >
-          Kron Coin, Charting the Course for Unprecedented Digital Security in
-          the Epoch of Web 3.0 Transformation
+          Krun Key, Safeguarding Your Digital Future.
         </p>
       </div>
     </section>
     <!-- about section -->
     <section
       id="about"
-      class="flex items-center bg-stone-100 xl:h-screen font-poppins dark:bg-gray-800"
+      data-te-animation="[fade-in_1s_ease-in-out]"
+      class="flex items-center xl:h-screen font-poppins bg-gray-900"
     >
       <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-            <div class="relative lg:max-w-md">
+            <div class="relative lg:max-w-md" data-aos="fade-up">
               <img
                 src="./img/logo.png"
                 alt="aboutimage"
                 class="relative z-10 object-cover w-full rounded h-96"
               />
               <div
-                class="absolute bottom-0 right-0 z-10 p-8 bg-white border-4 border-blue-500 rounded shadow dark:border-blue-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800"
+                class="absolute bottom-0 right-0 z-10 p-8 bg-yellow-100 border-4 border-blue-500 rounded shadow dark:border-blue-400 lg:-mb-8 lg:-mr-11 sm:p-8 dark:text-gray-300 dark:bg-gray-800"
               >
-                <p class="text-lg font-semibold md:w-72">
+                <p class="text-lg font-poppins md:w-72">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
+                    fill="orange"
                     class="absolute top-0 left-0 w-16 h-16 text-blue-700 dark:text-gray-300 opacity-10"
                     viewBox="0 0 16 16"
                   >
@@ -150,36 +163,35 @@
                       d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
                     ></path>
                   </svg>
-                  Welcome to Kron Coin: Your Trusted Partner in Security
+                  Security? Pfft, Krun Key Does It Better. Buckle Up!
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="w-full px-6 mb-10 lg:w-1/2 lg:mb-0 mt-8">
-            <div class="pl-4 mb-6 border-l-4 border-blue-500">
-              <span class="text-sm text-gray-600 uppercase dark:text-gray-400"
+          <div
+            class="w-full px-6 mb-10 lg:w-1/2 lg:mb-0 mt-8"
+            data-aos="fade-up-left"
+          >
+            <div class="pl-4 mb-6 border-l-4 border-yellow-500">
+              <span
+                class="text-sm text-gray-600 uppercase dark:text-gray-400 text-yellow-50"
                 >About Us</span
               >
               <h1
-                class="mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300"
+                style="color: #ffbf00"
+                class="mt-2 text-3xl font-black text-gray-700 md:text-5xl"
               >
-                What is Kron Coin?
+                What is Krun Coin?
               </h1>
             </div>
             <p
-              class="mb-6 text-base leading-7 text-gray-500 dark:text-gray-400"
+              class="mb-6 text-base leading-7 text-gray-500 dark:text-gray-400 text-stone-300"
             >
-              At Kron Coin, we're on a mission to revolutionize secure access
-              and empower users in the decentralized digital landscape. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Join us in
+              At Krun, we're on a mission to revolutionize secure access and
+              empower users in the decentralized digital landscape. Join us in
               crafting a new era of digital security where innovation meets your
-              safety. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              crafting a new era of digital security where innovation meets your
-              safety. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              safety.
             </p>
           </div>
         </div>
@@ -202,13 +214,16 @@
           <p
             class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-400"
           >
-            Choosing Kron Coin means choosing innovation, security, and a
-            seamless digital experience. Here's why Kron Coin stands out
+            Choosing Krun Coin means choosing innovation, security, and a
+            seamless digital experience. Here's why Krun Coin stands out
           </p>
         </div>
 
         <div class="grid gap-14 md:grid-cols-3 md:gap-5">
-          <div class="rounded-xl bg-white p-6 text-center shadow-xl">
+          <div
+            class="rounded-xl bg-white p-6 text-center shadow-xl"
+            data-aos="fade-right"
+          >
             <div
               class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40"
             >
@@ -226,6 +241,7 @@
           <div
             data-aos-delay="150"
             class="rounded-xl bg-white p-6 text-center shadow-xl"
+            data-aos="fade-up"
           >
             <div
               class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40"
@@ -237,7 +253,7 @@
             </h1>
             <p class="px-4 text-gray-500">
               Whether you prefer the simplicity of USB-C or the personalized
-              protection of biometric security, Kron Coin adapts to your
+              protection of biometric security, Krun Coin adapts to your
               preferences, providing a bespoke digital security experience for
               every user.
             </p>
@@ -245,6 +261,7 @@
           <div
             data-aos-delay="300"
             class="rounded-xl bg-white p-6 text-center shadow-xl"
+            data-aos="fade-left"
           >
             <div
               class="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-sky-500 shadow-sky-500/40"
@@ -252,11 +269,11 @@
               <i class="fa-solid fa-circle-nodes text-2xl w-6 text-white"></i>
             </div>
             <h1 class="text-darken mb-3 text-xl font-medium lg:px-14">
-              Kron Coin Ecosystem
+              Krun Coin Ecosystem
             </h1>
             <p class="px-4 text-gray-500">
-              Kron Coin isn't just about security; it's about the future of
-              decentralized transactions. Kron Coin, our bespoke cryptocurrency,
+              Krun Coin isn't just about security, it's about the future of
+              decentralized transactions. Krun Coin, our bespoke cryptocurrency,
               facilitates secure exchanges, fostering a vibrant, decentralized
               economy within the Web 3.0 framework.
             </p>
@@ -267,19 +284,20 @@
     <!-- why us section -->
     <section
       id="WhyUs"
-      class="flex items-center bg-stone-100 lg:h-screen font-poppins dark:bg-gray-800"
+      class="flex items-center bg-gray-800 lg:h-screen font-poppins dark:bg-gray-800"
     >
       <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
         <div class="px-4 mb-10 md:text-center md:mb-20">
           <h2
-            class="block w-full text-gray-700 dark:text-gray-300 font-bold text-3xl sm:text-4xl text-center"
+            style="color: #ffbf00"
+            class="block w-full dark:text-gray-300 font-bold text-3xl sm:text-4xl text-center animate-bounce"
           >
-            WHY CHOOSE KRON COIN ?
+            WHY CHOOSE KRUN ?
           </h2>
 
           <div class="inline-flex items-center justify-center w-full">
             <hr
-              class="w-64 h-1 my-8 bg-blue-400 border-0 rounded dark:bg-gray-700"
+              class="w-64 h-1 my-8 bg-yellow-400 border-0 rounded dark:bg-gray-700"
             />
             <div
               class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900"
@@ -289,28 +307,23 @@
 
         <div class="flex flex-wrap items-center">
           <div class="w-full px-4 mb-10 md:w-1/2 lg:mb-0">
-            <h2
-              class="mb-4 text-2xl font-bold text-gray-700 dark:text-gray-300"
-            >
+            <h2 class="mb-4 text-2xl font-medium text-white dark:text-gray-300">
               Unlocking Innovation, Securing Futures.
             </h2>
-            <p
-              class="mb-4 text-base leading-7 text-gray-500 dark:text-gray-400"
-            >
-              Experience the synergy of innovation and security. We transcend
-              the ordinary, delivering a holistic solution crafted to empower
-              both individuals and businesses
+            <p class="mb-4 text-base leading-7 text-white dark:text-gray-400">
+              Imagine a future free from security worries. Krun Coin makes it
+              real: Secure your dreams, embrace possibilities.
             </p>
             <ul class="mb-10">
               <li
-                class="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400"
+                class="flex items-center mb-4 text-base text-white dark:text-gray-400"
               >
                 <span class="mr-3 text-blue-500 dark:text-blue-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="currentColor"
+                    fill="#ffbf00"
                     class="w-5 h-5 bi bi-arrow-right-circle-fill"
                     viewBox="0 0 16 16"
                   >
@@ -322,14 +335,14 @@
                 Biometric Security
               </li>
               <li
-                class="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400"
+                class="flex items-center mb-4 text-base text-white dark:text-gray-400"
               >
                 <span class="mr-3 text-blue-500 dark:text-blue-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="currentColor"
+                    fill="#ffbf00"
                     class="w-5 h-5 bi bi-arrow-right-circle-fill"
                     viewBox="0 0 16 16"
                   >
@@ -341,14 +354,14 @@
                 Innovative Connectivity Options
               </li>
               <li
-                class="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400"
+                class="flex items-center mb-4 text-base text-white dark:text-gray-400"
               >
                 <span class="mr-3 text-blue-500 dark:text-blue-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="currentColor"
+                    fill="#ffbf00"
                     class="w-5 h-5 bi bi-arrow-right-circle-fill"
                     viewBox="0 0 16 16"
                   >
@@ -360,14 +373,14 @@
                 Versatility for Web 3.0
               </li>
               <li
-                class="flex items-center mb-4 text-base text-gray-600 dark:text-gray-400"
+                class="flex items-center mb-4 text-base text-white dark:text-gray-400"
               >
                 <span class="mr-3 text-blue-500 dark:text-blue-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="currentColor"
+                    fill="#ffbf00"
                     class="w-5 h-5 bi bi-arrow-right-circle-fill"
                     viewBox="0 0 16 16"
                   >
@@ -507,74 +520,30 @@ openFaq5: false,
 openFaq6: false
 }
 "
-      class="relative z-20 overflow-hidden bg-white dark:bg-dark pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+      style="background-color: #111827"
+      class="relative z-20 overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
     >
       <div class="container mx-auto">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
             <div class="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-              <span class="block mb-2 text-lg font-semibold text-primary">
+              <span class="block mb-2 text-lg font-semibold text-stone-400">
                 FAQ
               </span>
               <h2
-                class="text-dark dark:text-white mb-4 text-3xl font-bold sm:text-[40px]/[48px]"
+                class="text-white mb-4 text-3xl font-poppins sm:text-[40px]/[48px]"
               >
-                Any Questions? Look Here
+                Any Questions<i class="fa-solid fa-question fa-bounce"></i> Look
+                Here
               </h2>
-              <p class="text-base text-body-color dark:text-dark-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                velit, ab aliquid at voluptates animi
+              <p style="color: #ffbf00" class="text-base dark:text-dark-6">
+                Curiosity sparked? Find your answers here, or ask us anything!
               </p>
             </div>
           </div>
         </div>
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex flex-wrap -mx-4 p-7">
           <div class="w-full px-4 lg:w-1/2">
-            <div
-              class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
-            >
-              <button
-                class="flex w-full text-left faq-btn"
-                @click="openFaq1 = !openFaq1"
-              >
-                <div
-                  class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
-                >
-                  <svg
-                    :class="openFaq1 && 'rotate-180'"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="w-full">
-                  <h4
-                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
-                  >
-                    What makes Kron Coin's USB-C integration stand out in terms
-                    of security?
-                  </h4>
-                </div>
-              </button>
-              <div x-show="openFaq1" class="faq-content pl-[62px]">
-                <p
-                  class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
-                >
-                  Kron Coin's USB-C integration not only ensures universal
-                  connectivity but also guarantees a swift and robust link,
-                  maintaining the real-time integrity of secure digital
-                  interactions. This feature sets a new standard for convenience
-                  and security in the Web 3.0 environment.
-                </p>
-              </div>
-            </div>
             <div
               class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
             >
@@ -599,12 +568,12 @@ openFaq6: false
                     />
                   </svg>
                 </div>
+
                 <div class="w-full">
                   <h4
                     class="mt-1 text-lg font-semibold text-dark dark:text-white"
                   >
-                    How does Kron Coin's biometric security enhance personal
-                    protection?
+                    How does Krun Key's biometrics boost personal safety?
                   </h4>
                 </div>
               </button>
@@ -612,11 +581,11 @@ openFaq6: false
                 <p
                   class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
                 >
-                  Kron Coin's sophisticated fingerprint authentication
-                  technology places personal security at the forefront. This
-                  biometric safeguard ensures that only the rightful owner can
-                  gain access to their digital domain, significantly diminishing
-                  the threat of unauthorized access.
+                  Krun Key's sophisticated fingerprint authentication technology
+                  places personal security at the forefront. This biometric
+                  safeguard ensures that only the rightful owner can gain access
+                  to their digital domain, significantly diminishing the threat
+                  of unauthorized access.
                 </p>
               </div>
             </div>
@@ -648,7 +617,7 @@ openFaq6: false
                   <h4
                     class="mt-1 text-lg font-semibold text-dark dark:text-white"
                   >
-                    What role does Kron Coin play in the Kron Coin ecosystem?
+                    What role does Krun Coin play in the Krun Coin ecosystem?
                   </h4>
                 </div>
               </button>
@@ -656,7 +625,7 @@ openFaq6: false
                 <p
                   class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
                 >
-                  Kron Coin is the bespoke cryptocurrency central to the Kron
+                  Krun Coin is the bespoke cryptocurrency central to the Krun
                   Coin ecosystem. It goes beyond being a digital currency,
                   serving as the linchpin that facilitates seamless and secure
                   transactions within the Web 3.0 framework. It fosters a
@@ -694,7 +663,7 @@ openFaq6: false
                   <h4
                     class="mt-1 text-lg font-semibold text-dark dark:text-white"
                   >
-                    How does Kron Coin cater to individual security preferences?
+                    How does Krun Coin cater to individual security preferences?
                   </h4>
                 </div>
               </button>
@@ -702,7 +671,7 @@ openFaq6: false
                 <p
                   class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
                 >
-                  Kron Coin's user-centric design allows users to choose between
+                  Krun Coin's user-centric design allows users to choose between
                   the simplicity of USB-C or the robust security offered by
                   fingerprint recognition. This adaptability ensures a bespoke
                   digital security experience, catering to individual
@@ -738,7 +707,7 @@ openFaq6: false
                   <h4
                     class="mt-1 text-lg font-semibold text-dark dark:text-white"
                   >
-                    Can Kron Coin be used in the fast-paced Web 3.0 environment?
+                    Can Krun Coin be used in the fast-paced Web 3.0 environment?
                   </h4>
                 </div>
               </button>
@@ -746,56 +715,11 @@ openFaq6: false
                 <p
                   class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
                 >
-                  Yes, Kron Coin is designed to transcend conventional security
+                  Yes, Krun Coin is designed to transcend conventional security
                   solutions and offers innovative connectivity options suitable
                   for the dynamic and ever-evolving realm of Web 3.0. Its
                   features are aligned with the principles of empowerment and
                   safety in this fast-paced environment.
-                </p>
-              </div>
-            </div>
-            <div
-              class="w-full p-4 mb-8 bg-white rounded-lg shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8"
-            >
-              <button
-                class="flex w-full text-left faq-btn"
-                @click="openFaq6 = !openFaq6"
-              >
-                <div
-                  class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg"
-                >
-                  <svg
-                    :class="openFaq6 && 'rotate-180'"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-                <div class="w-full">
-                  <h4
-                    class="mt-1 text-lg font-semibold text-dark dark:text-white"
-                  >
-                    How does Kron Coin boost business growth in the digital
-                    landscape?
-                  </h4>
-                </div>
-              </button>
-              <div x-show="openFaq6" class="faq-content pl-[62px]">
-                <p
-                  class="py-3 text-base leading-relaxed text-body-color dark:text-dark-6"
-                >
-                  Kron Coin is not just a product; it's a catalyst for
-                  successful business growth. With over 25 years of expertise in
-                  providing business solutions, Kron Coin stands as a reliable
-                  and experienced partner in digital security, ensuring
-                  businesses thrive in the evolving digital landscape.
                 </p>
               </div>
             </div>
@@ -833,18 +757,18 @@ openFaq6: false
       </div>
     </section>
     <!-- footer section -->
-    <footer class="py-11">
+    <footer class="py-11 bg-gradient-to-b from-[#080808] to-[#080808]">
       <div class="text-center">
         <a
           href="#"
-          class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
+          class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 text-white"
         >
-          <img src="./img/logo.png" class="h-12 mr-3 sm:h-9" alt="Kron Logo" />
-          Kron Coin
+          <img src="./img/logo.png" class="h-12 mr-3 sm:h-9" alt="Krun Logo" />
+          StarkUnit
         </a>
 
-        <span class="block text-sm text-center text-gray-500 dark:text-gray-400"
-          >&copy; 2023-2024 <a href="#" class="hover:underline">KronCoin</a>™ .
+        <span class="block text-sm text-center text-white dark:text-gray-400"
+          >&copy; 2023-2024 <a href="#" class="hover:underline">StarkUnit</a>™ .
           All Rights Reserved.
         </span>
 
@@ -852,7 +776,7 @@ openFaq6: false
           <li>
             <a
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              class="text-white hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
             >
               <svg
                 class="w-5 h-5"
@@ -871,7 +795,7 @@ openFaq6: false
           <li>
             <a
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              class="text-white hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
             >
               <svg
                 class="w-5 h-5"
@@ -890,7 +814,7 @@ openFaq6: false
           <li>
             <a
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              class="text-white hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
             >
               <svg
                 class="w-5 h-5"
@@ -907,7 +831,7 @@ openFaq6: false
           <li>
             <a
               href="#"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              class="text-white hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
             >
               <svg
                 class="w-5 h-5"
@@ -932,5 +856,8 @@ openFaq6: false
       src="https://kit.fontawesome.com/1ee95f46e4.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
